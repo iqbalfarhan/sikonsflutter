@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sikons/partials/drawer_partial.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,27 +18,7 @@ class HomeScreen extends StatelessWidget {
       body: const Center(
         child: Text('Home'),
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: const [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-              child: Text("Sikons"),
-            ),
-            ListTile(
-              title: Text("Home"),
-            ),
-            ListTile(
-              title: Text("About"),
-            ),
-            ListTile(
-              title: Text("Contact"),
-            ),
-          ],
-        ),
-      ),
+      drawer: const DrawerPartial(),
     );
   }
 }
