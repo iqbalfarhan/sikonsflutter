@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sikons/screens/about_screen.dart';
 import 'package:sikons/screens/home_screen.dart';
+import 'package:sikons/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,13 +14,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/': (context) => const HomeScreen(),
+        '/about': (context) => const AboutScreen(),
+      },
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
     );
   }
 }
