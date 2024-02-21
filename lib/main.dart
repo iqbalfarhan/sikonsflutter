@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/': (context) => const HomeScreen(),
         '/about': (context) => const AboutScreen(),
+        '/laporan': (context) => const AboutScreen(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
